@@ -1,0 +1,72 @@
+/* Arquivo: css/historia.css
+  Descrição: Estilos específicos para a página "Nossa História".
+*/
+
+/* Fundo para a página de história */
+.history-page {
+    background: linear-gradient(135deg, #111827, #1f2937);
+}
+
+/* Seção de tela cheia para a página de história */
+.full-screen-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para os cards da página de história */
+.philosophy-card {
+    background-color: rgba(31, 41, 55, 0.3);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(99, 102, 241, 0.5); /* indigo-500 */
+}
+.philosophy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -50%, rgba(99, 102, 241, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.philosophy-card:hover::before {
+    opacity: 1;
+}
+.philosophy-card ul li {
+    padding-left: 1.25rem;
+    position: relative;
+}
+.philosophy-card ul li::before {
+    content: '■';
+    color: #818cf8; /* text-indigo-400 */
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+.philosophy-card:hover ul li::before {
+    transform: rotate(180deg);
+}
+
+/* Animações de Entrada (controladas por JS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

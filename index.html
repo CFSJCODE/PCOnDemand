@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 
+  Arquivo: index.html
+  Descrição: Estrutura principal da página inicial da PC-OnDemand.
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC-OnDemand - Montagem e Manutenção de Computadores</title>
+    <meta name="description" content="Soluções completas para seu PC: montagem sob medida e manutenção especializada. Performance e confiança em um só lugar.">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Folha de Estilos Personalizada -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- JavaScript com 'defer' para carregamento otimizado -->
+    <script src="js/main.js" defer></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Cabeçalho Fixo e Transparente -->
+    <header class="bg-gray-900/80 backdrop-blur-sm absolute top-0 z-50 w-full">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center" aria-label="Navegação principal">
+            <a href="index.html" class="text-2xl font-bold text-white">
+                PC<span class="text-indigo-400">OnDemand</span>
+            </a>
+
+            <!-- Menu para Desktop -->
+            <ul class="hidden md:flex items-center space-x-8">
+                <li>
+                    <a href="index.html" class="relative text-indigo-400 font-semibold py-2">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-400 rounded-full"></span>
+                    </a>
+                </li>
+                <li><a href="nossa_historia.html" class="text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2">Nossa História</a></li>
+                <li><a href="nossaequipe_parceiros.html" class="text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2">Equipe e Parceiros</a></li>
+                <li><a href="agendamentos.html" class="text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2">Contatos</a></li>
+            </ul>
+
+            <!-- Botão do Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile (controlado via JavaScript) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95">
+            <ul class="px-6 pb-4 space-y-3 pt-3">
+                <li>
+                    <a href="index.html" class="relative block text-indigo-400 font-semibold py-2 text-center">
+                        Home
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/4 h-0.5 bg-indigo-400 rounded-full"></span>
+                    </a>
+                </li>
+                <li><a href="nossa_historia.html" class="block text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2 text-center">Nossa História</a></li>
+                <li><a href="equipe.html" class="block text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2 text-center">Equipe e Parceiros</a></li>
+                <li><a href="contato.html" class="block text-gray-300 hover:text-indigo-400 font-semibold transition-colors py-2 text-center">Contatos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Hero com layout dividido -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    
+                    <!-- Coluna de Montagem -->
+                    <div class="service-card">
+                        <h1 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">Montagem Sob Medida</h1>
+                        <p class="text-lg text-gray-300 max-w-md mx-auto mb-8">Criamos o PC dos seus sonhos, peça por peça, focado no seu uso e orçamento.</p>
+                        <a href="agendamentos.html" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 inline-block">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+
+                    <!-- Coluna de Manutenção -->
+                    <div class="service-card">
+                        <h1 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">Manutenção e Upgrades</h1>
+                        <p class="text-lg text-gray-300 max-w-md mx-auto mb-8">Otimizamos, reparamos e atualizamos seu computador para garantir performance máxima.</p>
+                        <a href="agendamentos.html" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform transform hover:scale-105 inline-block">
+                            Agendar Serviço
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5531997697561" target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+</body>
+</html>

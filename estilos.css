@@ -1,0 +1,60 @@
+/* Arquivo: css/estilos.css
+  Descrição: Estilos personalizados que complementam o Tailwind CSS.
+*/
+
+/* Define a fonte padrão e impede a rolagem da página */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden; /* Impede a barra de rolagem */
+}
+
+/* Estilo da seção Hero:
+  - Ocupa a altura total da tela (100vh).
+  - Usa Flexbox para centralizar o conteúdo vertical e horizontalmente.
+  - Imagem de fundo com um gradiente escuro para legibilidade.
+*/
+.hero-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2042&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para os cards de serviço:
+  - Fundo semitransparente para destacar do background.
+  - Efeito de 'glassmorphism' com o backdrop-blur.
+  - Padding e bordas arredondadas para um visual moderno.
+*/
+.service-card {
+    background-color: rgba(17, 24, 39, 0.6); /* bg-gray-900 com 60% de opacidade */
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 0.75rem; /* rounded-xl */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para o botão flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}

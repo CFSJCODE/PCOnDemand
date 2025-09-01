@@ -1,0 +1,48 @@
+/* Arquivo: css/equipe.css
+  Descrição: Estilos específicos para a página "Equipe e Parceiros".
+*/
+
+/* Fundo para a página de equipe */
+.equipe-page {
+    background: linear-gradient(135deg, #111827, #1f2937);
+}
+
+/* Estilo para os cards de parceiros */
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: rgba(31, 41, 55, 0.3);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.partner-card-link {
+    display: inline-block;
+    margin-top: auto; /* Alinha o link na parte inferior */
+    font-weight: 600;
+    color: #818cf8; /* text-indigo-400 */
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-card-link {
+    transform: translateX(5px);
+}
+
+.partner-card-link.inactive {
+    color: #6b7280; /* text-gray-500 */
+    cursor: default;
+}
+
+.partner-card:hover .partner-card-link.inactive {
+    transform: none;
+}

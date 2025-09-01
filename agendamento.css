@@ -1,0 +1,13 @@
+/*
+ * Arquivo: css/agendamento.css
+ * Descrição: Estilos personalizados para a página de agendamento do site PC-OnDemand.
+ */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Força o ícone do calendário a ser branco para melhor contraste no tema escuro */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
